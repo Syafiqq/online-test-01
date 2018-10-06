@@ -1,3 +1,4 @@
+require('../../node_modules/html5-boilerplate/dist/js/vendor/modernizr-3.6.0.min.js');
 window._      = require('lodash');
 window.Popper = require('popper.js').default;
 
@@ -10,9 +11,18 @@ window.Popper = require('popper.js').default;
 try
 {
     window.$ = window.jQuery = require('jquery');
+    require('../../node_modules/html5-boilerplate/dist/js/plugins.js');
+    require('bootstrap')
 } catch (e)
 {
 }
+window.Cookies   = require('js-cookie');
+window.FastClick = require('fastclick');
+window.FastClick(document.body);
+window.NProgress = require('nprogress');
+require('jquery-slimscroll');
+require('jquery.easing');
+require('bootstrap-notify');
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -37,7 +47,6 @@ if (token)
     window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
 } else
 {
-    console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
 
 /**

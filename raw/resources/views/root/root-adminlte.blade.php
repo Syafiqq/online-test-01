@@ -16,12 +16,6 @@ if (!is_null($session->get('cbk_msg')))
 
 @section('head-css-pre')
     @parent
-    {{-- Font Awesome --}}
-    <link rel="stylesheet" href="{{asset('/assets/vendor/font-awesome/css/font-awesome.min.css')}}">
-    {{-- Ionicons --}}
-    <link rel="stylesheet" href="{{asset('/assets/vendor/ionicons/dist/css/ionicons.min.css')}}">
-    {{-- NProgress --}}
-    <link rel="stylesheet" href="{{asset('/assets/vendor/nprogress/nprogress.min.css')}}">
     {{-- Adminlte --}}
     @yield('adminlte-style-addon')
     <link rel="stylesheet" href="{{asset('/assets/vendor/admin-lte/dist/css/AdminLTE.min.css')}}">
@@ -31,14 +25,6 @@ if (!is_null($session->get('cbk_msg')))
 
 @section('body-js-lower-pre')
     @parent
-    {{-- SlimScroll --}}
-    <script type="text/javascript" src="{{asset('/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js')}}"></script>
-    {{-- FastClick --}}
-    <script type="text/javascript" src="{{asset('/assets/vendor/fastclick/lib/fastclick.min.js')}}"></script>
-    {{-- NProgress --}}
-    <script type="text/javascript" src="{{asset('/assets/vendor/nprogress/nprogress.min.js')}}"></script>
-    {{-- Notify --}}
-    <script type="text/javascript" src="{{asset('/assets/vendor/bootstrap-notify/bootstrap-notify.min.js')}}"></script>
     {{-- Adminlte --}}
     <script type="text/javascript">
         {!! 'var sessionFlashdata = ' . json_encode($flashdata)!!}

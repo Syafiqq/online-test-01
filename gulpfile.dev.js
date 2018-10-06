@@ -157,6 +157,8 @@ gulp.task('minify-and-watch', function (callback) {
         callback);
 });
 
+gulp.task('cleaning-laravel', shell.task('php artisan clear-compiled && php artisan cache:clear && php artisan config:clear && php artisan optimize:clear && php artisan route:clear && php artisan view:clear'));
+
 gulp.task('cleaning-generated-file-light', function () {
     return del(gdel.delLight());
 });
@@ -166,7 +168,8 @@ gulp.task('cleaning-generated-file-hard', function () {
 });
 
 gulp.task('clean-everything', function (callback) {
-    runSequence('cleaning-generated-file-light',
+    runSequence('cleaning-laravel',
+        'cleaning-generated-file-light',
         'cleaning-generated-file-hard',
         callback);
 });

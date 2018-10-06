@@ -10,11 +10,7 @@
 @endsection
 
 @section('head-css-pre')
-    {{-- Normalize --}}
-    <link rel="stylesheet" href="{{asset('/assets/vendor/html5-boilerplate/dist/css/normalize.min.css')}}">
-    {{-- Main --}}
-    <link rel="stylesheet" href="{{asset('/assets/vendor/html5-boilerplate/dist/css/main.min.css')}}">
-    {{----}}
+    <link rel="stylesheet" href="{{asset('/assets/css/app.min.css')}}">
 @endsection
 
 @section('head-js-post')
@@ -38,12 +34,5 @@
 @endsection
 
 @section('body-js-lower-pre')
-    {{--Modernizr--}}
-    <script type="text/javascript" src="{{asset('/assets/vendor/html5-boilerplate/dist/js/vendor/modernizr-3.6.0.min.js')}}"></script>
-    {{-- Jquery --}}
-    <script type="text/javascript" src="{{asset('/assets/vendor/jquery/dist/jquery.min.js')}}"></script>
-    <script type="text/javascript">window.jQuery || document.write('<script src="{{asset('/assets/vendor/jquery/dist/jquery.min.js')}}"><\/script>')</script>
-    {{-- Plugins --}}
-    <script type="text/javascript" src="{{asset('/assets/vendor/html5-boilerplate/dist/js/plugins.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('/assets/vendor/js-cookie/src/js.cookie.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('/assets/js/app.min.js')}}"></script>
 @endsection
